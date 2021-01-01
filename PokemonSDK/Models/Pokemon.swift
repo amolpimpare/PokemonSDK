@@ -39,7 +39,7 @@ public struct FlavorText: Codable {
 }
 
 /// PokemonSpecies
-struct PokemonSpecies: Codable {
+public struct PokemonSpecies: Codable {
     public var flavorTextEntries: [FlavorText]?
     
     enum CodingKeys: String, CodingKey {

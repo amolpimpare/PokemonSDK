@@ -8,7 +8,7 @@
 import Foundation
 import Combine
 
-protocol TranslatorWebRepository {
+public protocol TranslatorWebRepository {
     func translate(_ text: String) -> AnyPublisher<ShakespeareanDescription, Error>
 }
 
@@ -30,7 +30,7 @@ public struct TranslatorWebService: HTTPWebService {
 }
 
 extension TranslatorWebService: TranslatorWebRepository {
-    func translate(_ text: String) -> AnyPublisher<ShakespeareanDescription, Error> {
+    public func translate(_ text: String) -> AnyPublisher<ShakespeareanDescription, Error> {
         call(endpoint: API.translate, parameters: ["text": text] )
     }
 }

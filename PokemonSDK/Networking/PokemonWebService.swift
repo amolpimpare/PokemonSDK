@@ -8,7 +8,7 @@
 import Foundation
 import Combine
 
-protocol PokemonWebRepository {
+public protocol PokemonWebRepository {
     func fetchPokemon(_ pokemonName: String) -> AnyPublisher<Pokemon, Error>
     func fetchPokemonSpecies(_ pokemonSpeciesName: String) -> AnyPublisher<PokemonSpecies, Error>
 }
@@ -34,11 +34,11 @@ public struct PokemonWebService: HTTPWebService {
 }
 
 extension PokemonWebService: PokemonWebRepository {
-    func fetchPokemon(_ pokemonName: String) -> AnyPublisher<Pokemon, Error> {
+    public func fetchPokemon(_ pokemonName: String) -> AnyPublisher<Pokemon, Error> {
         call(endpoint: API.fetchPokemonByName(pokemonName))
     }
     
-    func fetchPokemonSpecies(_ pokemonSpeciesName: String) -> AnyPublisher<PokemonSpecies, Error> {
+    public func fetchPokemonSpecies(_ pokemonSpeciesName: String) -> AnyPublisher<PokemonSpecies, Error> {
         call(endpoint: API.fetchPokemonSpeciesByName(pokemonSpeciesName))
     }
 }
