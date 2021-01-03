@@ -1,0 +1,11 @@
+framework module PokemonSDK {
+  umbrella header "PokemonSDK.h"
+
+  export *
+  module * { export * }
+}
+
+module PokemonSDK.Swift {
+    header "PokemonSDK-Swift.h"
+    requires objc
+}

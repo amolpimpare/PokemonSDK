@@ -1,0 +1,140 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.3.2 (swiftlang-1200.0.45 clang-1200.0.32.28)
+// swift-module-flags: -target x86_64-apple-ios13.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name PokemonSDK
+import Combine
+import Foundation
+@_exported import PokemonSDK
+import Swift
+import SwiftUI
+public struct ImageView : SwiftUI.View {
+  public init(withURL url: Swift.String)
+  public var body: some SwiftUI.View {
+    get
+  }
+  public typealias Body = @_opaqueReturnTypeOf("$s10PokemonSDK9ImageViewV4bodyQrvp", 0) 🦸
+}
+public enum HTTPError : Swift.Error, Foundation.LocalizedError {
+  case missingURL
+  case invalidRequest
+  case requestFailed(Swift.Error)
+}
+public class ImageLoader : Foundation.ObservableObject {
+  public var didChange: Combine.PassthroughSubject<Foundation.Data, Swift.Never>
+  public var data: Foundation.Data {
+    get
+    set
+  }
+  public init(urlString: Swift.String)
+  @objc deinit
+  public typealias ObjectWillChangePublisher = Combine.ObservableObjectPublisher
+}
+public struct DetailsView : SwiftUI.View {
+  public init(name: Swift.String, sprite: Swift.String, description: Swift.String)
+  public var body: some SwiftUI.View {
+    get
+  }
+  public typealias Body = @_opaqueReturnTypeOf("$s10PokemonSDK11DetailsViewV4bodyQrvp", 0) 🦸
+}
+public typealias Parameters = [Swift.String : Any]
+public typealias HTTPHeaders = [Swift.String : Swift.String]
+public enum HTTPMethod : Swift.String {
+  case get
+  case post
+  public typealias RawValue = Swift.String
+  public init?(rawValue: Swift.String)
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public protocol HTTPWebService {
+  var session: Foundation.URLSession { get }
+  var baseURL: Swift.String { get }
+}
+public protocol TranslatorWebRepository {
+  func translate(_ text: Swift.String) -> Combine.AnyPublisher<PokemonSDK.ShakespeareanDescription, Swift.Error>
+}
+public struct TranslatorWebService : PokemonSDK.HTTPWebService {
+  public enum API {
+    case translate
+    public static func == (a: PokemonSDK.TranslatorWebService.API, b: PokemonSDK.TranslatorWebService.API) -> Swift.Bool
+    public var hashValue: Swift.Int {
+      get
+    }
+    public func hash(into hasher: inout Swift.Hasher)
+  }
+  public var baseURL: Swift.String
+  public var session: Foundation.URLSession
+}
+extension TranslatorWebService : PokemonSDK.TranslatorWebRepository {
+  public func translate(_ text: Swift.String) -> Combine.AnyPublisher<PokemonSDK.ShakespeareanDescription, Swift.Error>
+}
+public class PokemonAPI {
+  final public let session: Foundation.URLSession
+  public init(session: Foundation.URLSession = URLSession.shared)
+  public var pokemonService: PokemonSDK.PokemonWebService {
+    get
+  }
+  public var translatorService: PokemonSDK.TranslatorWebService {
+    get
+  }
+  @objc deinit
+}
+public struct PokemonSprites : Swift.Codable {
+  public var frontDefault: Swift.String?
+  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: Swift.Encoder) throws
+}
+public struct Pokemon : Swift.Codable {
+  public var name: Swift.String
+  public var sprites: PokemonSDK.PokemonSprites
+  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: Swift.Encoder) throws
+}
+public struct Language : Swift.Codable {
+  public var name: Swift.String
+  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: Swift.Encoder) throws
+}
+public struct FlavorText : Swift.Codable {
+  public var text: Swift.String
+  public var language: PokemonSDK.Language
+  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: Swift.Encoder) throws
+}
+public struct PokemonSpecies : Swift.Codable {
+  public var flavorTextEntries: [PokemonSDK.FlavorText]?
+  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: Swift.Encoder) throws
+}
+public struct ShakespeareanDescription : Swift.Codable {
+  public var contents: PokemonSDK.ShakespeareanDescription.Contents
+  public struct Contents : Swift.Codable {
+    public var translated: Swift.String
+    public var text: Swift.String
+    public init(from decoder: Swift.Decoder) throws
+    public func encode(to encoder: Swift.Encoder) throws
+  }
+  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: Swift.Encoder) throws
+}
+public protocol PokemonWebRepository {
+  func fetchPokemon(_ pokemonName: Swift.String) -> Combine.AnyPublisher<PokemonSDK.Pokemon, Swift.Error>
+  func fetchPokemonSpecies(_ pokemonSpeciesName: Swift.String) -> Combine.AnyPublisher<PokemonSDK.PokemonSpecies, Swift.Error>
+}
+public struct PokemonWebService : PokemonSDK.HTTPWebService {
+  public enum API {
+    case fetchPokemonSpeciesByName(Swift.String)
+    case fetchPokemonByName(Swift.String)
+  }
+  public var baseURL: Swift.String
+  public var session: Foundation.URLSession
+}
+extension PokemonWebService : PokemonSDK.PokemonWebRepository {
+  public func fetchPokemon(_ pokemonName: Swift.String) -> Combine.AnyPublisher<PokemonSDK.Pokemon, Swift.Error>
+  public func fetchPokemonSpecies(_ pokemonSpeciesName: Swift.String) -> Combine.AnyPublisher<PokemonSDK.PokemonSpecies, Swift.Error>
+}
+extension PokemonSDK.HTTPMethod : Swift.Equatable {}
+extension PokemonSDK.HTTPMethod : Swift.Hashable {}
+extension PokemonSDK.HTTPMethod : Swift.RawRepresentable {}
+extension PokemonSDK.TranslatorWebService.API : Swift.Equatable {}
+extension PokemonSDK.TranslatorWebService.API : Swift.Hashable {}
