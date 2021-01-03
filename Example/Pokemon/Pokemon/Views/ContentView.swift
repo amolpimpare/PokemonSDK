@@ -16,6 +16,15 @@ struct ContentView: View {
     
     @State private var searchText: String = ""
     
+    private enum AccessibilityIdentifiers {
+        static let magnifyingGlass = "com.pokemon.search.magnifyingglass"
+        static let clearButton = "com.pokemon.search.button.clear"
+        static let searchField = "com.pokemon.search.textfiled"
+        static let spinner = "com.pokemon.search.spinner"
+        static let errorLabel = "com.pokemon.search.label.error"
+        static let list = "com.pokemon.search.table"
+    }
+    
     var body: some View {
         NavigationView {
             List {
@@ -23,11 +32,13 @@ struct ContentView: View {
                 HStack(spacing: 8) {
                     Image(systemName: "magnifyingglass")
                         .imageScale(.large)
+                        .accessibility(identifier: AccessibilityIdentifiers.magnifyingGlass)
                     
                     TextField("Search Pokemon...", text: $searchText, onCommit:  {
                         self.searchPokemon(searchText)
                     })
                     .keyboardType(.webSearch)
+                    .accessibility(identifier: AccessibilityIdentifiers.searchField)
                     
                     if searchText.isEmpty == false {
                         Button(action: {
@@ -37,6 +48,7 @@ struct ContentView: View {
                                 .foregroundColor(.gray)
                                 .padding(.trailing)
                         }
+                        .accessibility(identifier: AccessibilityIdentifiers.clearButton)
                     }
                 }
                 
@@ -44,6 +56,7 @@ struct ContentView: View {
                     HStack {
                         Spacer()
                         Spinner(isAnimating: true, style: .large, color: .gray).frame(width: 100, height: 100, alignment: .center)
+                            .accessibility(identifier: AccessibilityIdentifiers.spinner)
                         Spacer()
                     }
                     
@@ -51,7 +64,7 @@ struct ContentView: View {
                     
                     if let error = strore.error {
                         Text("\(error)")
-                        
+                            .accessibility(identifier: AccessibilityIdentifiers.errorLabel)
                     } else {
                         if strore.isEmpty {
                             Text("")
@@ -82,6 +95,7 @@ struct ContentView: View {
                     }
                 }
             }
+            .accessibility(identifier: AccessibilityIdentifiers.list)
             .navigationBarTitle("Hello!")
             .gesture(DragGesture().onChanged { _ in
                 self.hideKeyboard()
