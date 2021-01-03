@@ -1,5 +1,5 @@
 # PokemonSDK
-Pokemon API - Uses Combine and SwiftUI framework starting in iOS 13. Minimum
+Pokemon API - Uses Combine and SwiftUI framework starting in iOS 13.
 
 
 ## About SDK
