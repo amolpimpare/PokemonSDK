@@ -24,7 +24,6 @@ public struct TranslatorWebService: HTTPWebService {
         }
     }
     
-    
     public var baseURL: String = "https://api.funtranslations.com"
     public var session: URLSession
 }
