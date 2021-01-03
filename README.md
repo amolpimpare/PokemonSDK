@@ -49,14 +49,20 @@ PokemonAPI().translatorService.translate("Text to be translated")
 All webservices functions return an `AnyPublisher`. Success values decoded from the JSON response. Errors returned as `HTTPError`.
 
 
-### Sample Apps - Pokemon
-
-Checkout sample app `Pokemon` in examples folder. It provides follwoing functionalities 
+### How to Run Sample Apps - `Pokemon`
 
 - Search for pokemon an
 - Long press on searched result to add it to favrites
 - Showpokemon detials with Shakespearean description and image
- 
+
+Steps
+
+1. Download sample `Pokemon` app in examples folder. Open `Pokemon.xcodeproj` in Xcode and install it on device
+2. Launch application, You will see `Search Screen`
+3. Tap into search field to seach for pokemon. You will see loading indicator and then will see 
+4. Long press on Row, to add it to favorites.
+5. Tap on each row to navigate to pokemon details.
+
 
 ## TODO
 
