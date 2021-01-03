@@ -8,6 +8,9 @@ PokemonSDK provide Swift API for fetching Pokemon from PokéAPI (https://pokeapi
 
 ## Usage
 
+1. Downloading PokemonSDK.xcframework-1.0.0.zip and unarchive.
+2. Add unarchived PokemonSDK.xcframework into your porojects embeded frameworks section.
+
 Use the `PokemonAPI` class to access Pokenmon and translation web services.
 
 ## Examples
@@ -45,6 +48,15 @@ PokemonAPI().translatorService.translate("Text to be translated")
 
 All webservices functions return an `AnyPublisher`. Success values decoded from the JSON response. Errors returned as `HTTPError`.
 
+
+### Sample Apps - Pokemon
+
+Checkout sample app `Pokemon` in examples folder. It provides follwoing functionalities 
+
+- Search for pokemon an
+- Long press on searched result to add it to favrites
+- Showpokemon detials with Shakespearean description and image
+ 
 
 ## Author
 
