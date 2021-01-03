@@ -49,7 +49,7 @@ PokemonAPI().translatorService.translate("Text to be translated")
 All webservices functions return an `AnyPublisher`. Success values decoded from the JSON response. Errors returned as `HTTPError`.
 
 
-### How to Run Sample Apps - `Pokemon`
+## How to Run Sample Apps - `Pokemon`
 
 - Search for pokemon an
 - Long press on searched result to add it to favrites
