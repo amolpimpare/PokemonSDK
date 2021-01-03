@@ -58,6 +58,14 @@ Checkout sample app `Pokemon` in examples folder. It provides follwoing function
 - Showpokemon detials with Shakespearean description and image
  
 
+## TODO
+
+- Improve Error handlling
+- Add unit tests
+- Create swift pakage to distribute binary SDK
+
+
+
 ## Author
 
 Amol Pimpare, pimpareac@gmail.com
