@@ -50,7 +50,7 @@ class PokemonUITests: XCTestCase {
         }
         
         searchPage.searchField.typeText("\n")
-        XCTAssertTrue(searchPage.errorLabel.exists)
+        expect(searchPage.errorLabel)
         XCTAssertEqual(searchPage.errorLabel.label, "Unable to find Pokemon named test")
         XCTAssertTrue(searchPage.clearButton.exists)
         searchPage.clearButton.checkIsHittableAndTap()
