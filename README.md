@@ -64,12 +64,15 @@ Steps
 5. Tap on each row to navigate to pokemon details.
 
 
-## TODO
+## TODO - 
+
+Could not finish due to time limits.
 
 - Improve Error handlling
 - Add unit tests
 - Create swift pakage to distribute binary SDK
-
+- Add accessiblity support in built-in SDK UI
+- Better code commeting.
 
 
 ## Author
