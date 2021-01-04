@@ -7,6 +7,8 @@
 
 import Foundation
 
+/// TODO: - Improve error handling by adding dffrent error code for network errors
+/// Define diffrent API Errors
 public enum HTTPError: Error, LocalizedError {
     case missingURL
     case invalidRequest

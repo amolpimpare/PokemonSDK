@@ -14,31 +14,31 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		VuyZYPU5mXtnqRu46+27Yz4GwNo=
+		EfrHZ1xvgWkR1SJWFbhAyZLUxMY=
 		</data>
 		<key>Modules/PokemonSDK.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<data>
-		1AcMzvyPRALmTlf2LTS5SuSPTdo=
+		DvzFRlFXkS+pDMsu/qBtjbPAl4w=
 		</data>
 		<key>Modules/PokemonSDK.swiftmodule/arm64-apple-ios.swiftinterface</key>
 		<data>
-		Efqr5xnPWXMsMNC13w8yL3bIaKM=
+		5ZCKGZ9xq6Pi2E6tJCkb+La0fAA=
 		</data>
 		<key>Modules/PokemonSDK.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<data>
-		e5v6kyv8zWhYNoLhlfelDNT31lc=
+		Om/vW03AVTCOO/cEd4bsdI7tbJ8=
 		</data>
 		<key>Modules/PokemonSDK.swiftmodule/arm64.swiftdoc</key>
 		<data>
-		1AcMzvyPRALmTlf2LTS5SuSPTdo=
+		DvzFRlFXkS+pDMsu/qBtjbPAl4w=
 		</data>
 		<key>Modules/PokemonSDK.swiftmodule/arm64.swiftinterface</key>
 		<data>
-		Efqr5xnPWXMsMNC13w8yL3bIaKM=
+		5ZCKGZ9xq6Pi2E6tJCkb+La0fAA=
 		</data>
 		<key>Modules/PokemonSDK.swiftmodule/arm64.swiftmodule</key>
 		<data>
-		e5v6kyv8zWhYNoLhlfelDNT31lc=
+		Om/vW03AVTCOO/cEd4bsdI7tbJ8=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -65,42 +65,42 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			fA6BoC4UVdDyj/gi6WP2l07uGRw+HMAIOGI7XqZTQkQ=
+			WutlfKc9/PHSJcydSNghEDl5an4Fkn/F+uhAxj3YkcQ=
 			</data>
 		</dict>
 		<key>Modules/PokemonSDK.swiftmodule/arm64-apple-ios.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			GlRwhhBV06H6Gm28zDjNe50F85YoPRBBS2bd++xSEZU=
+			JhO0zxMaoh0Ayu1QWFKm2WuxATVv6eoTdzDsaU3chck=
 			</data>
 		</dict>
 		<key>Modules/PokemonSDK.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			efoj+miBsJ0YKHcS2DcLenIdSN6aEQYJNhdCZ1dzoso=
+			dBjsCZmvFDTpVuZQmduwXVZJwj1jMKJ2lbrWsc3fsB0=
 			</data>
 		</dict>
 		<key>Modules/PokemonSDK.swiftmodule/arm64.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			fA6BoC4UVdDyj/gi6WP2l07uGRw+HMAIOGI7XqZTQkQ=
+			WutlfKc9/PHSJcydSNghEDl5an4Fkn/F+uhAxj3YkcQ=
 			</data>
 		</dict>
 		<key>Modules/PokemonSDK.swiftmodule/arm64.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			GlRwhhBV06H6Gm28zDjNe50F85YoPRBBS2bd++xSEZU=
+			JhO0zxMaoh0Ayu1QWFKm2WuxATVv6eoTdzDsaU3chck=
 			</data>
 		</dict>
 		<key>Modules/PokemonSDK.swiftmodule/arm64.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			efoj+miBsJ0YKHcS2DcLenIdSN6aEQYJNhdCZ1dzoso=
+			dBjsCZmvFDTpVuZQmduwXVZJwj1jMKJ2lbrWsc3fsB0=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>

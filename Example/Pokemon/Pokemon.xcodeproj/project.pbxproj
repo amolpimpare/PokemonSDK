@@ -12,6 +12,7 @@
 		92083CAD25A27638007EA5C4 /* SearchPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92083CAB25A27638007EA5C4 /* SearchPage.swift */; };
 		92083CB025A2764C007EA5C4 /* XCTestCase+Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92083CAF25A2764C007EA5C4 /* XCTestCase+Helper.swift */; };
 		92083CB425A27B99007EA5C4 /* XCUIElement+Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92083CB325A27B99007EA5C4 /* XCUIElement+Helper.swift */; };
+		92083CBD25A338A0007EA5C4 /* DetailsPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92083CBC25A338A0007EA5C4 /* DetailsPage.swift */; };
 		9278B519259F9EE000CAADD3 /* PokemonModel+FetchRequests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9278B518259F9EE000CAADD3 /* PokemonModel+FetchRequests.swift */; };
 		927A27E0259CF5F70069CF4E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 927A27DF259CF5F70069CF4E /* AppDelegate.swift */; };
 		927A27E2259CF5F70069CF4E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 927A27E1259CF5F70069CF4E /* SceneDelegate.swift */; };
@@ -62,6 +63,7 @@
 		92083CAB25A27638007EA5C4 /* SearchPage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchPage.swift; sourceTree = "<group>"; };
 		92083CAF25A2764C007EA5C4 /* XCTestCase+Helper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "XCTestCase+Helper.swift"; sourceTree = "<group>"; };
 		92083CB325A27B99007EA5C4 /* XCUIElement+Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XCUIElement+Helper.swift"; sourceTree = "<group>"; };
+		92083CBC25A338A0007EA5C4 /* DetailsPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsPage.swift; sourceTree = "<group>"; };
 		9278B518259F9EE000CAADD3 /* PokemonModel+FetchRequests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PokemonModel+FetchRequests.swift"; sourceTree = "<group>"; };
 		927A27DC259CF5F70069CF4E /* Pokemon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pokemon.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		927A27DF259CF5F70069CF4E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -117,6 +119,7 @@
 			children = (
 				92083CAA25A27638007EA5C4 /* BasePage.swift */,
 				92083CAB25A27638007EA5C4 /* SearchPage.swift */,
+				92083CBC25A338A0007EA5C4 /* DetailsPage.swift */,
 			);
 			path = Pages;
 			sourceTree = "<group>";
@@ -329,6 +332,7 @@
 				92083CB025A2764C007EA5C4 /* XCTestCase+Helper.swift in Sources */,
 				92083CA125A275DE007EA5C4 /* PokemonUITests.swift in Sources */,
 				92083CAC25A27638007EA5C4 /* BasePage.swift in Sources */,
+				92083CBD25A338A0007EA5C4 /* DetailsPage.swift in Sources */,
 				92083CAD25A27638007EA5C4 /* SearchPage.swift in Sources */,
 				92083CB425A27B99007EA5C4 /* XCUIElement+Helper.swift in Sources */,
 			);

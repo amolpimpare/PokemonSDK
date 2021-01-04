@@ -8,11 +8,21 @@
 import Foundation
 
 protocol APICall {
+    /// endpoint path after base url
     var path: String { get }
 }
 
 extension APICall {
     
+    /// Build URLRequest with given info
+    /// - Parameters:
+    ///   - baseURL: baseURL of the resource to be fetched
+    ///   - method: HTTP Method such as `GET`, `POST` etc
+    ///   - headers: HTTP Request headers
+    ///   - parameters: request parameters
+    ///   - body: body parameter
+    /// - Throws: throws HTTPError if url is invalid, encoding failed etc
+    /// - Returns: URLRequest
     public func buildUrlRequest(baseURL: String,
                                 method: HTTPMethod = .get,
                                 headers: HTTPHeaders = ["Content-Type": "application/json"],
@@ -40,6 +50,11 @@ extension APICall {
         return request
     }
     
+    /// This method creates query string and adds percent encoding to the request parameters
+    /// - Parameters:
+    ///   - request: request to be encoded
+    ///   - queryParams: queryParams to be encoded and added to request
+    /// - Throws: throws error if url is missing
     private func encode(_ request: inout URLRequest, with queryParams: Parameters) throws {
         guard let url = request.url else {
             throw HTTPError.missingURL

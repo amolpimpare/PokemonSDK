@@ -19,6 +19,4 @@ class SearchPage: BasePage {
     
     let addToFavroiteButton = buttons["Add To Favorites"]
     let favoritesSection = staticTexts["FAVORITES"]
-    
-    let backButton = navigationBars.buttons["Hello!"]
 }

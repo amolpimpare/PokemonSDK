@@ -8,14 +8,19 @@
 import Foundation
 import Combine
 
+/// HTTP Request paramters
 public typealias Parameters = [String: Any]
+
+/// HTTP request headers like `["Content-Type": "application/json"]`
 public typealias HTTPHeaders = [String: String]
 
+/// HTTP Request method
 public enum HTTPMethod: String {
     case get = "GET"
     case post = "POST"
 }
 
+/// Define Webservice requirements
 public protocol HTTPWebService {
     var session: URLSession { get }
     var baseURL: String { get }
@@ -23,6 +28,15 @@ public protocol HTTPWebService {
 
 extension HTTPWebService {
     
+    /// TODO: - Improve error handling
+    /// Performs webservice call with given endpoint and info
+    /// - Parameters:
+    ///   - endpoint: service endpoint
+    ///   - method: HTTP Method such as `GET`, `POST` etc
+    ///   - headers: HTTP Request headers
+    ///   - parameters: request parameters
+    ///   - body: body parameter
+    /// - Returns: AnyPublisher<Value, Error> with `Value` is decodable object  and `Errror` is  HTTPError
     func call<Value>(endpoint: APICall,
                      method: HTTPMethod = .get,
                      headers: HTTPHeaders = ["Content-Type": "application/json"],

@@ -8,6 +8,7 @@
 import Foundation
 import Combine
 
+/// Define pokemon webservice use cases.
 public protocol PokemonWebRepository {
     func fetchPokemon(_ pokemonName: String) -> AnyPublisher<Pokemon, Error>
     func fetchPokemonSpecies(_ pokemonSpeciesName: String) -> AnyPublisher<PokemonSpecies, Error>

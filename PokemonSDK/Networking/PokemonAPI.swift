@@ -7,6 +7,7 @@
 
 import Foundation
 
+/// Provide API  to access Pokemon and Translation webservices
 public class PokemonAPI {
     public let session: URLSession
     

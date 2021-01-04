@@ -11,6 +11,8 @@ import XCTest
 class PokemonUITests: XCTestCase {
     
     private let searchPage = SearchPage()
+    private let detailsPage = DetailsPage()
+    
     override func setUpWithError() throws {
         continueAfterFailure = false
         
@@ -86,7 +88,11 @@ class PokemonUITests: XCTestCase {
         let favoriteCell = searchPage.table.cells.element(boundBy: 2)
         XCTAssertEqual(favoriteCell.label, "Wartortle")
         favoriteCell.checkIsHittableAndTap()
-        expect(searchPage.backButton)
-        searchPage.backButton.checkIsHittableAndTap()
+        expect(detailsPage.backButton)
+        XCTAssertTrue(detailsPage.nameLabel.exists)
+        XCTAssertEqual(detailsPage.nameLabel.label, "Wartortle")
+        
+        XCTAssertTrue(detailsPage.descLabel.exists)        
+        detailsPage.backButton.checkIsHittableAndTap()
     }
 }

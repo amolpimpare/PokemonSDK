@@ -29,6 +29,11 @@ public class ImageLoader : Foundation.ObservableObject {
   public typealias ObjectWillChangePublisher = Combine.ObservableObjectPublisher
 }
 public struct DetailsView : SwiftUI.View {
+  public enum AccessibilityIdentifier {
+    public static let sprite: Swift.String
+    public static let name: Swift.String
+    public static let description: Swift.String
+  }
   public init(name: Swift.String, sprite: Swift.String, description: Swift.String)
   public var body: some SwiftUI.View {
     get
